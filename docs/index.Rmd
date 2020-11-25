@@ -1,6 +1,6 @@
 ---
-title: "Beatriz Milz's CV"
-author: Beatriz Milz
+title: "William Amorim's CV"
+author: William Amorim
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
@@ -11,24 +11,32 @@ output:
     self_contained: true
 #knit: pagedown::chrome_print      
 ---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+
+
 ```{r metathis, echo=FALSE}
 library(metathis)
 meta() %>%
-  meta_name("github-repo" = "beatrizmilz/resume") %>% 
+  meta_name("github-repo" = "williamorim/resume") %>% 
   meta_social(
-    title = "Beatriz Milz CV",
+    title = "William Amorim CV",
     description = paste(
       "CV made with the packages RMarkdown, pagedown, datadrivencv."
     ),
-    url = "https://beatrizmilz.github.io/resume/index.html",
-    image = "https://beatrizmilz.github.io/resume/img/share-card.png",
+    url = "https://williamorim.github.io/resume/index.html",
+    image = "https://williamorim.github.io/resume/img/share-card.png",
     image_alt = paste(
-      "Beatriz Milz CV"
+      "William Amorim CV"
     ),
     og_type = "website",
-    og_author = "Beatriz Milz",
-    twitter_card_type = "summary_large_image",
-    twitter_creator = "@beamilz"
+    og_author = "William Amorim"
   )
 ```
 <!-- inicio academic icons -->
@@ -53,15 +61,11 @@ source("cv_printing_functions.r")
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1iBxpNzwZWOrOwR__Y4FNDQ_3tpw-0trS0PVigsS4z6w/edit?usp=sharing",  
+  data_location = "https://docs.google.com/spreadsheets/d/1tDDF9v4cO18nd2JZur5zq7y-7Xb7f4KsBhjJD_WUneE",  
   pdf_mode = params$pdf_mode
 )
 
-
-
 CV$entries_data <- CV$entries_data %>% dplyr::filter(in_resume == TRUE)
-
-
 
 ```
 
@@ -146,10 +150,8 @@ Last updated on `r Sys.Date()`. The most recent version of this resume is [avail
 Main
 ================================================================================
 
-Beatriz Milz {#title}
+William Amorim {#title}
 --------------------------------------------------------------------------------
-
-__English__: Hello! My name is Beatriz, and I'm a Doctorate Student in Environmental Sciences. <!-- , and I'm an enthusiast of the  R programming language, of open source and reproducible research. --> __Português__: Olá! Meu nome é Beatriz, e sou doutoranda em Ciência Ambiental. <!-- Sou entusiasta da linguagem de progração R, de software livre e de pesquisa reprodutível. --> __Español__: ¡Hola! Mi nombre es Beatriz, soy estudiante de doctorado en Ciencias Ambientales. <!-- Soy entusiasta del lenguaje R, de software libre y de investigación reproducible. -->
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
