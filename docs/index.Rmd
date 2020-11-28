@@ -9,7 +9,7 @@ output:
   pagedown::html_resume:
     css: [ 'dd_cv.css', 'custom.css','resume']
     self_contained: true
-#knit: pagedown::chrome_print      
+knit: pagedown::chrome_print      
 ---
 
 ```{r, include=FALSE}
@@ -95,7 +95,7 @@ CONTACT {#contact}
 
 - <i class="fa fa-external-link-alt"></i> <a href='http://lattes.cnpq.br/9062934205884130'> Lattes </a> 
 
-- <i class="fa fa-home"></i> [Site]()
+- <i class="fa fa-home"></i> [Webpage]()
 
 <br>
 
@@ -166,6 +166,7 @@ Selected Works {data-icon=laptop}
 CV %<>% print_section('works')
 ```
 
+
 Research Projects {data-icon=laptop}
 --------------------------------------------------------------------------------
 
@@ -173,7 +174,6 @@ Research Projects {data-icon=laptop}
 CV %<>% print_section('research_projects')
 ```
 
-<br>
 <br>
 
 Teaching Experience {data-icon=chalkboard-teacher}
